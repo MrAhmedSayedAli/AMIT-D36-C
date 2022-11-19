@@ -1,0 +1,9 @@
+
+
+set(APP_SOURCES
+        ${APP_SOURCES}
+
+        ${CMAKE_CURRENT_SOURCE_DIR}/dht22.c
+        ${CMAKE_CURRENT_SOURCE_DIR}/dht22.h
+
+        PARENT_SCOPE)

@@ -1,0 +1,10 @@
+add_subdirectory(dio)
+add_subdirectory(interrupt)
+add_subdirectory(adc)
+add_subdirectory(uart)
+add_subdirectory(spi)
+add_subdirectory(i2c)
+add_subdirectory(eeprom)
+add_subdirectory(timer)
+
+set(APP_SOURCES ${APP_SOURCES} PARENT_SCOPE)
