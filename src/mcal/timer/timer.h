@@ -68,6 +68,7 @@ github : https://github.com/MrAhmedSayedAli
 /***************************************************/
 
 void TIMER0_INIT(void);
+void TIMER0_SetCompareMatchValue(uint8 compareMatchValue);
 
 void TIMER0_StartTimer(uint8 prescaler);
 void TIMER0_StopTimer(void);

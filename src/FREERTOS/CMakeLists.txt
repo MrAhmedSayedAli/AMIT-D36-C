@@ -1,0 +1,36 @@
+set(APP_SOURCES
+        ${APP_SOURCES}
+
+        ${CMAKE_CURRENT_SOURCE_DIR}/atomic.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/croutine.c
+        ${CMAKE_CURRENT_SOURCE_DIR}/croutine.h
+
+        ${CMAKE_CURRENT_SOURCE_DIR}/deprecated_definitions.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/event_groups.c
+        ${CMAKE_CURRENT_SOURCE_DIR}/event_groups.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/FreeRTOS.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/FreeRTOSConfig.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/heap_1.c
+        ${CMAKE_CURRENT_SOURCE_DIR}/list.c
+        ${CMAKE_CURRENT_SOURCE_DIR}/list.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/message_buffer.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/mpu_prototypes.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/mpu_wrappers.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/port.c
+        ${CMAKE_CURRENT_SOURCE_DIR}/portable.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/portmacro.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/projdefs.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/queue.c
+        ${CMAKE_CURRENT_SOURCE_DIR}/queue.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/regtest.c
+        ${CMAKE_CURRENT_SOURCE_DIR}/regtest.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/semphr.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/stack_macros.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/StackMacros.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/stream_buffer.c
+        ${CMAKE_CURRENT_SOURCE_DIR}/stream_buffer.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/task.h
+        ${CMAKE_CURRENT_SOURCE_DIR}/tasks.c
+        ${CMAKE_CURRENT_SOURCE_DIR}/timers.c
+        ${CMAKE_CURRENT_SOURCE_DIR}/timers.h
+        PARENT_SCOPE)

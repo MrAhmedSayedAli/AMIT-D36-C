@@ -12,7 +12,19 @@ void TIMER0_INIT(void) {
 #if (TIMER_OPERATION_MODE == TIMER0_MODE_INTERVAL)
     TIMER0_TCCR0_REG|= TIMER0_INTERVAL_MODE;
 #elif (TIMER_OPERATION_MODE == TIMER0_MODE_CTC)
-    TIMER0_TCCR0_REG |= TIMER0_CTC_MODE;
+    //TIMER0_TCCR0_REG |= TIMER0_CTC_MODE;
+    // Select Mode = CTC Mode
+    clearBit(TIMER0_TCCR0_REG,6);
+    setBit(TIMER0_TCCR0_REG,3);
+
+    // Enable CTC Interrupt
+    setBit(TIMER0_TIMSK_REG,1);
+
+    // Select Prescaler Value = 64
+    setBit(TIMER0_TCCR0_REG,0);
+    setBit(TIMER0_TCCR0_REG,1);
+    clearBit(TIMER0_TCCR0_REG,2);
+
 #elif (TIMER_OPERATION_MODE == TIMER0_MODE_FAST_PWM)
     TIMER0_TCCR0_REG|= TIMER0_PWM_FAST;
 #elif (TIMER_OPERATION_MODE == TIMER0_MODE_PWM_PHASE_CORRECT)
@@ -22,6 +34,10 @@ void TIMER0_INIT(void) {
 #endif
 }
 
+//=====================================>
+void TIMER0_SetCompareMatchValue(uint8 compareMatchValue){
+    TIMER0_OCR0_REG = compareMatchValue;
+}
 //=====================================>
 void TIMER0_StartTimer(uint8 prescaler) {
     TIMER0_TCCR0_REG |= prescaler;

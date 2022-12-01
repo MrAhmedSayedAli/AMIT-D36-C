@@ -12,6 +12,7 @@ typedef char int8;
 typedef unsigned short uint16;
 typedef short int16;
 
+#define NULL 0
 
 typedef enum {
     STD_LOW = 0,
@@ -23,6 +24,8 @@ typedef enum {
     FALSE = 0,
     TRUE
 } boolean;
+
+
 
 
 #endif //DIO_TEST_STD_TYPES_H
